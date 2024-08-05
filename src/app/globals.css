@@ -2,32 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html {
+  font-size: 1vw;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 4.266vw;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  @font-face {
+    font-family: 'svn400';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../../public/fonts/SVN-Gilroy\ Light.otf');
+  }
+  @font-face {
+    font-family: 'svn500';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../../public/fonts/SVN-Gilroy\ Medium.otf');
+  }
+  @font-face {
+    font-family: 'svn600';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../../public/fonts/SVN-Gilroy\ SemiBold.otf');
+  }
+  @font-face {
+    font-family: 'svn800';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../../public/fonts/SVN-Gilroy\ XBold.otf');
+  }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }
