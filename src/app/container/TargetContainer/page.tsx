@@ -12,13 +12,17 @@ export default function TargetContainer() {
           width={310}
           height={646}
         />
-        <Image
-          className="w-[12.625rem] h-[26.375rem] md:w-[19.375rem] md:h-[40.375rem]"
-          src={'/images/target-big.jpg'}
-          alt="target-big"
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="w-[12.625rem] h-[26.375rem] md:w-[19.375rem] md:h-[40.375rem] object-cover border-[#7BCB18] border-[4px] rounded-2xl"
           width={310}
           height={646}
-        />
+        >
+          <source src={'/videos/target-big.mp4'} type="video/mp4" />
+        </video>
       </div>
       <div className="md:w-full md:max-w-[42.8125rem] px-[0.65rem] md:px-0 pb-[3.75rem] md:pb-0">
         <p className="font-svn600 text-[1rem] leading-[1.3rem] md:text-[1.125rem] md:leading-[1.4625rem] text-black3 mb-[0.88rem] md:mb-[1.5rem]">
