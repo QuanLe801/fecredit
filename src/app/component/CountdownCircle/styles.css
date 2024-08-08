@@ -1,0 +1,32 @@
+#countdown {
+  height: 3.75rem;
+  width: 3.75rem;
+  text-align: center;
+  position: relative;
+  filter: drop-shadow(0px 3px 10px rgba(39, 141, 87, 0.2));
+}
+
+#countdown-number {
+  color: black;
+  position: absolute;
+  top: 0;
+  margin: 0 auto;
+}
+
+svg circle {
+  stroke-dasharray: 500px;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
+  stroke-width: 5px;
+}
+
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 500px;
+    stroke: #b1ff83;
+  }
+  to {
+    stroke-dashoffset: 0px;
+    stroke: #b1ff83;
+  }
+}
