@@ -41,7 +41,7 @@ export default function ResultContainer() {
         }
         return { ...prevCount, agency: prevCount.agency + 1 };
       });
-    }, 0.1);
+    }, 0.01);
 
     // Interval for wareHouse counter
     const intervalId2 = setInterval(() => {
@@ -52,7 +52,7 @@ export default function ResultContainer() {
         }
         return { ...prevCount, wareHouse: prevCount.wareHouse + 1 };
       });
-    }, 0.1);
+    }, 0.01);
 
     // Interval for province counter
     const intervalId3 = setInterval(() => {
@@ -63,7 +63,7 @@ export default function ResultContainer() {
         }
         return { ...prevCount, province: prevCount.province + 1 };
       });
-    }, 0.1);
+    }, 0.01);
 
     // Cleanup the intervals on component unmount
     return () => {
@@ -159,10 +159,12 @@ export default function ResultContainer() {
           </div>
           <div className="overflow-hidden">
             <Swiper
-              loop
+              // loop
               onBeforeInit={swiper => {
                 sliderRef.current = swiper;
               }}
+              allowTouchMove={false}
+              allowSlideNext
               initialSlide={currentSlide}
               onActiveIndexChange={swiper => {
                 setCurrenSlide(swiper.realIndex);

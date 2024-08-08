@@ -9,6 +9,7 @@ import ResultContainer from './container/ResultContainer/page';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import OverviewContainer from './container/OverviewContainer/page';
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <CompetiorContainer />
       <RulesContainer />
       <ResultContainer />
+      <OverviewContainer />
     </main>
   );
 }
