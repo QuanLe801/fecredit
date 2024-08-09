@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect, useRef, useState } from 'react';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import CountdownCircle from '@/app/component/CountdownCircle/page';
 import Image from 'next/image';
 import { tutotialStep } from '@/app/util/constants';
@@ -76,18 +76,6 @@ export default function ResultContainer() {
   const formatNumber = (number: number) => {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   };
-
-  // const handleNext = () => {
-  //   if (currentSlide < 4) {
-  //     setCurrenSlide(currentSlide + 1);
-  //   }
-  // };
-
-  // const handlePrevious = () => {
-  //   if (currentSlide > 0) {
-  //     setCurrenSlide(currentSlide - 1);
-  //   }
-  // };
 
   const SlideDetail = ({
     step,

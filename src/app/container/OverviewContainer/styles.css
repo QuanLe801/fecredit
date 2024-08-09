@@ -1,0 +1,16 @@
+.customSwiper {
+  height: 20rem;
+}
+
+.customSwiper .swiper-slide img {
+  height: 10rem;
+  transition: all 0.5s linear;
+}
+
+.customSwiper .swiper-slide-active img {
+  height: 20rem !important;
+}
+
+.customSwiper .swiper-slide-next img {
+  height: 15rem !important;
+}
